@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="site.css">
+  </head>
+
+  <body style="background-color: rgba(170, 255, 0, .4); font-style: italic; font-family: Arial, Helvetica, sans-serif ;">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center" style="background-image: url('BellyButtons.jpg');  height: 400px;" >
+          <br /><br /><br /><br /><br /><br /><h1 style="background-color: rgba(255, 0, 0, 0.4);  color: white; text-shadow: 0 0 2px #000;";>Belly Button Biodiversity Dashboard</h1>
+          <p style="background-color: rgba(119, 0, 255, .4); color: black;">Use the interactive charts below to explore the dataset</p>
+        </div>
+      <div class="row">
+        <div class="col-md-12 text-center" >
+          <div style="background-color: rgba(4, 0, 255, 0.652); color: white;" id="desc">
+              <h3>
+                Bellybutton Data
+            </h3>
+            <p>Who knew that it may be possible to make fake beef based on belly button bacteria? Yup, it's true! Scientists have found a chemical link between certain belly button bacterias and artifical beef - yum! Use the scroll down menu to view the results for different test samples. Graphs summarize the most common bacterias found, number of bacterias per sample, and belly button washing frequency per sample.</p>
+            </div> 
+        </div>
+      </div>
+      <div class="row">
+          <div><br /></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div id='jump' class="well" style="background-color: rgba(234, 0, 255, 0.652); color: black; height: 125px;">
+            <h5>Test Subject ID No.:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            <h5>Scroll down to see Charts</h5>
+            <br />
+          </div>
+        </div>
+        <div class="col-md-4">          
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Demographic Info</h3>
+            </div>  
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div>
+            <a href="#bar2"><div style="background-color: rgba(0, 255, 0, 0.494); color: black; border: 0; width: 100%; text-align: center;">Go to Bar Chart</div></a>
+          </div>
+          <br />
+          <div>
+            <a href="#gauge2"><div style="background-color: rgba(48, 13, 13, 0.400); color: black; border: 0; width: 100%; text-align: center;">Go to Gauge Chart</div></a>
+          </div>
+          <br />
+          <div>
+            <a href="#bubble2"><div style="background-color: rgba(255, 0, 140, 0.419); color: black; border: 0; width: 100%; text-align: center;">Go to Bubble Chart</div></a>
+          </div>
+          <br />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="bar2" style="width: 100%"><a id="#bar"></a></div>
+          <div id="bardiv" class="well" style="background-color: rgba(0, 255, 0, 0.494); color: black;">
+            <h5>Out of the many bacterias discovered in folk's belly buttons, these lucky bacterias are the top ten per sample. Congratulations!</h5>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="gauge2" style="width: 100%"><a id="#guage"></a></div>
+          <div id="gaugediv" class="well" style="background-color: rgba(48, 13, 13, 0.400); color: black;">
+            <h5>Interested to see if there is a link between belly button washing frequency and particular bacteria levels? Take a look!</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div><br /></div>
+      </div>
+
+      <div class="row" >
+        <div class="col-md-12">
+          <div id="bubble2"><a id="#guage"></a></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="bubblesdiv" class="well" style="background-color: rgba(255, 0, 140, 0.419); color: black;">
+            <h5>It's amazing to see the variance of different types of bacteria levels per belly button.</h5>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="charts.js"></script>
+
+    </div>
+  </body>
+</html>
